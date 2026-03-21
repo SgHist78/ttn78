@@ -1,0 +1,193 @@
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 0 1rem;
+  color: #222;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+/* --- UNIVERSAL IMAGE PRESENTATION --- */
+
+.figure-block {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+figure {
+  margin: 0;
+}
+
+/* Default figcaption */
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* NEW: Large default caption */
+.caption-large {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Smart adaptive image frame */
+/**********************************
+.img-frame {
+  width: 100%;
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+*****************************************/
+.img-frame {
+  width: 70%;
+  max-width: 520px;
+  margin: 1.5rem auto;
+
+  background: #f2f2f2;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+/* Mobile override */
+@media (max-width: 600px) {
+  .img-frame {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/*****************************
+.img-frame img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+****************************/
+
+.img-frame.landscape {
+  aspect-ratio: 16 / 9;
+}
+
+.img-frame.portrait {
+  aspect-ratio: auto;
+  padding: 1rem 0;
+}
+
+.img-frame.square {
+  aspect-ratio: 1 / 1;
+}
+
+/**********************
+.img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+*************************/
+
+.img-frame img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.section {
+  margin-bottom: 2.5rem;
+}
+.family-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.family-table th,
+.family-table td {
+  padding: 6px 12px;
+}
+
+.family-table th:first-child,
+.family-table td:first-child {
+  width: 45%;   /* Sons column */
+}
+
+.family-table th:last-child,
+.family-table td:last-child {
+  width: 55%;   /* Daughters column */
+}
+.family-table td + td,
+.family-table th + th {
+  border-left: 1px solid #ccc;
+}
+.family-table th {
+  text-align: left;
+}
+
+
+.dotted-divider {
+  margin: 2rem 0;
+  border-bottom: 3px dotted #ffeb3b; /* bright yellow */
+}
+
+
+.dotted-divider-3 {
+  margin: 2rem 0;
+  border-bottom: 4px dashed #ffeb3b  ;  /*  yellow  */
+  background: none !important;
+  height: 0;
+  line-height: 0;
+}
+
+
+/*  Drop down menu  new */
+.section-drop {
+  margin: 1.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  background: #fafafa;
+}
+
+.section-drop summary {
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.5rem 0;
+}
+
+.section-drop[open] {
+  background: #fff;
+  border-color: #888;
+}
+
+.section-drop summary::-webkit-details-marker {
+  display: none;
+}
+
+.section-drop summary::before {
+  content: "▶ ";
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+.section-drop[open] summary::before {
+  transform: rotate(90deg);
+}
