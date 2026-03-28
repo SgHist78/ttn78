@@ -1,5 +1,6 @@
 body {
-  font-family: system-ui, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
+  /** font-family: system-ui, sans-serif;  **/
   line-height: 1.6;
   margin: 2rem auto;
   max-width: 800px;
@@ -37,20 +38,6 @@ figcaption {
 }
 
 /* Smart adaptive image frame */
-/**********************************
-.img-frame {
-  width: 100%;
-  background: #f2f2f2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-*****************************************/
 .img-frame {
   width: 70%;
   max-width: 520px;
@@ -76,13 +63,6 @@ figcaption {
   }
 }
 
-/*****************************
-.img-frame img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-****************************/
 
 .img-frame.landscape {
   aspect-ratio: 16 / 9;
@@ -97,13 +77,6 @@ figcaption {
   aspect-ratio: 1 / 1;
 }
 
-/**********************
-.img-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-*************************/
 
 .img-frame img {
   max-width: 100%;
