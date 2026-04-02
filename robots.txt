@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://SgHist78.github.io/ttn78/sitemap.xml
