@@ -7,7 +7,7 @@
       content="
         default-src 'self';
         script-src 'self';
-        style-src 'self';
+        style-src 'self' 'unsafe-inline' blob:;
         img-src 'self';
         object-src 'none';
         base-uri 'self';
@@ -16,18 +16,18 @@
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="Referrer-Policy" content="no-referrer">
   <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
-<head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>TTN78 – Tan Family Historical Archive</title>
+  <title>TTN78 – Tan Family, People, Places, Stories Archive</title>
 
-  <meta name="description" content="A historical and photographic archive documenting the Tan family’s heritage, featuring rare images, locations, and early Singapore history.">
+  <meta name="description" content="A historical and photographic archive documenting the Tan family’s stories, featuring rare images, locations, and Singapore history.">
 
   <link rel="canonical" href="https://SgHist78.github.io/ttn78/">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="TTN78 – Tan Family Historical Archive">
+  <meta property="og:title" content="TTN78 – Tan Family, the People, Places and Stories Archive">
   <meta property="og:description" content="A curated archive of Tan family history, early Singapore photographs, and heritage research.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://SgHist78.github.io/ttn78/">
@@ -40,7 +40,7 @@
   <meta name="twitter:image" content="https://SgHist78.github.io/ttn78/SE1.jpg">
 
   <!-- Optional favicon -->
-  <!---link rel="icon" href="SE1.jpg"--->
+<!-- link rel="icon" type="image/png" sizes="32x32" href="img1/c-icon.jpg" -->
 
   <!-- Structured Data: WebPage -->
   <script type="application/ld+json">
@@ -48,46 +48,138 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "TTN78 – Tan Family Historical Archive",
-    "description": "A historical and photographic archive documenting the Tan family’s heritage, featuring rare images, locations, and early Singapore history.",
+    "description": "A historical and photographic archive documenting the Tan family’s stories, featuring rare images, locations, and Singapore history.",
     "url": "https://SgHist78.github.io/ttn78/",
-    "image": "https://SgHist78.github.io/ttn78/SE1.jpg"
+    "image": "https://SgHist78.github.io/ttn78/img1/SE-Downing-3.png"
   }
   </script>
 
 
-  <title>The House of Tan Tang Niah</title>
+  <title>The House of Tan Tang Niah, the people, their stories</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Externalised CSS -->
   <link rel="stylesheet" href="style.css">
+  
 
   <!-- Externalised JS -->
   <script src="Script.js" defer></script>
 </head>
 
-</body>
-<p><strong>Release Date: 03 Apr 2026</strong><br></p>
+<body>
+<div class="hamburger-wrapper fixed-hamburger">
+    <input type="checkbox" id="hamburger-toggle">
+    <label for="hamburger-toggle" class="hamburger-icon">&#9776;</label>
 
-
-  <h1>The House of Tan Tang Niah</h1>
-
-  <figure class="figure-block">
-    <figcaption class="caption-large">
-      Pic TT01: House of Tan Tang Niah, 37 Kerbau Road, Little India. 
-    </figcaption>
-    <div class="img-frame">
-      <img src="img1/KerbauRd5.png" alt="House of Tan Tang Niah" >
+    <div class="hamburger-panel">
+        <a href="index.html">TTN Home Page</a>
+        <a href="story2.html">Farrer Park area and pioneer NS</a>
     </div>
-    <figcaption class="caption-large">
-      <em>Family Collection, restored with help from CoPilot</em>
-    </figcaption>
-  </figure>
+</div>
 
-  <div class="section">
+<div class="story-container">
+   <p id="center-text"><strong>Last UpDate: 23 Apr 2026</strong><br></p>
+
+<div class="grid-side-by-side small-image">
+    <img src="img1/c-icon-1.jpg">
+    <div><p><em>Life is like a journey<br>
+            Storms may come our way<br>
+            sometimes with shafts of light and a rainbow</em></p>
+         <p>Photo: Majestic Rocky Mountains, Banff area, Canada . . <em>Family Collection</em></p>
+    </div>  
+</div>
+
+  <h1>The House of Tan Tang Niah, the people, their stories</h1>  
+
+     <figure class="figure-block">
+        <figcaption class="caption-large"><p class="new-item">
+      Pic TT01: House of Tan Tang Niah, 37 Kerbau Road, Little India.</p>
+        </figcaption>
+        <div class="img-frame">
+      <img src="img1/KerbauRd5.png" alt="House of Tan Tang Niah" >
+        </div>
+        <figcaption class="caption-large">
+      <em>Family Collection, restored with help from CoPilot</em>
+        </figcaption>
+     </figure>
+<p>.</p>
+    <figure class="figure-block">
+        <figcaption class="caption-large"><p class="new-item">
+      Pic TT02: Outside the old Garage, House of Tan Tang Niah, 1980s.</p>
+        </figcaption>
+        <div class="img-frame">
+      <img src="img1/Kerbau-gate-3.png" alt="Outside the old gate, 1980s" >
+        </div>
+        <figcaption class="caption-large">
+      <em>Family Collection, restored with help from CoPilot</em>
+        </figcaption>
+   </figure>
+<p class="center-text">Note: the garage was demolished during heritage renovation in the 1980s</p>
+<p>.</p>
+
+    <figure class="figure-block">
+        <figcaption class="caption-large"><p class="new-item">
+      Pic TT03: Inside the old garage, House of Tan Tang Niah, early 1950s.</p>
+        </figcaption>
+        <div class="img-frame">
+      <img src="img1/Kerbau-tank-2.png" alt="Inside the old garage, early 1950s" >
+        </div>
+        <figcaption class="caption-large">
+      <em>Family Collection, restored with help from CoPilot</em>
+        </figcaption>
+     </figure>
+<p class="center-text">The fish tank at right, now demolished, was a choice spot for photos</p>
+<p>.</p>
+<p class="new-item">
+<div class="two-pics-row">
+<!--Left PIC -->
+        <div class="pic-box">
+        <div class="caption-top">Inside the old garage, Kerbau Rd, (demolished) </div>
+
+        <div class="img-frame equal-height">
+      <img src="img2/garagedoor.jpg" alt="Old garage at Kerbau Rd">
+        </div>
+
+        <div class="caption-bottom"><em>Family Collection, early 1950s</em></div>
+
+    <p class="pic-comment">
+      Family photo inside the garage.
+    </p>
+       </div>  <!-- pic box -->
+
+  <!-- RIGHT PIC -->
+       <div class="pic-box">
+       <div class="caption-top">Bicycle Racing, rear courtyard, early 1950s.</div>
+
+       <div class="img-frame equal-height">
+      <img src="img2/cycle.jpg" alt="cycle race rear courtyard">
+       </div>
+
+      <div class="caption-bottom"><em>Familty collection, early 1950s</em></div>
+
+    <p class="pic-comment">
+      An exciting race was about to begin. Who will win ?
+    </p>
+      </div>  <!-- pic box -->
+
+    </div>  <!-- 2 pics row -->
+
+
+    <div class="section">
     
  
-    <p>Tan Tang Niah (TTN) was a prominent Chinese community leader in early 20th‑century Singapore. He was a JP, a confectionery manufacturer, and owned a rubber plantation in Johore. The family residence was 40 Kerbau Road. This was later renumbered to 37 Kerbau Rd. He died in 1925 at the age of 63 (Ref 01).</p>
-    <p> Positions he held included :
+    <p>Tan Tang Niah (TTN) was a prominent Chinese community leader in early 20th‑century Singapore. He was a JP, a confectionery manufacturer, and owned a rubber plantation in Johore. The family residence was 40 Kerbau Road. This was later renumbered to 37 Kerbau Rd. He died in 1925 at the age of 63 (Ref 01). He left behind his wife, Mdm Teo Hong Beng, 8 sons, and 3 daughters.</p>
+    <p>This site tells the stories of some of TTN's more prominent offsprings, based on available documents</p>
+
+<div class="text-blob">
+  <input type="checkbox" id="blob1" class="blob-toggle">
+
+  <label for="blob1" class="blob-summary">
+    For more details, tap or click here to toggle on/off
+  </label>
+
+  <div class="blob-content">
+    <p> Positions he held included :</p>
     <ul>
       <li> President of Chung Cheng School</li>
       <li> assisted in Cheong Poon Girls School </li>
@@ -97,30 +189,35 @@
       <li> member of Poh Leong association</li>
       <li> a Justice of the Peace (JP)</li>
     </ul>
-    </p>
+
 <p>Ref 01: Orbiturary<em>Straits Times 1 Jul 1925 pg 8</em></p>
     <p>TTN married Mdm Teo Hong Beng , to whom he bequeathed the family home at 37 Kerbau Rd. This home was later designated a National Monument and acquired by the Singapore Government.</p>
     <p> Mdm Teo Hong Beng passed away 30 Jun 1940.(Ref 02)</p>
 <p>Ref 02: Orbituary - Mrs Tan Tang Niah.<em>Straits Times 2 Jul 1940 pg 2</em></p>
 <p> Sons and daughters of Tang Tang Niah</p>
 <p> Note: Tan Boon Chiat, in the Table below, was TTN's son from his first wife (she did not accompany him to Singapore)</p>
-<p>Sons and daughters of Tang Tang Niah</p>
-<table class="family-table">
-  <tr><th>Sons</th><th>Daughters</th></tr>
-  <tr><td>Tan Boon Chiat</td><td></td></tr>
-  <tr><td>Tan Sim Boh</td><td>Tan Biau Eng (Mrs Kang Tiang Kim)</td></tr>
-  <tr><td>Tan Sim Eng</td><td>Tan Biau Hwa (Mrs Cheong Ann Sim)</td></tr>
-  <tr><td>Tan Sim Teck</td><td>Tan Biau Luan (Mrs Lim Peng Han)</td></tr>
-  <tr><td>Tan Peng Choo</td><td></td></tr>
-  <tr><td>Tan Sim Keng</td><td></td></tr>
-  <tr><td>Tan Kim Hoe</td><td></td></tr>
-  <tr><td>Tan Kim Guan</td><td></td></tr>
-</table>
+<p>Sons and Daughters of TTN</p>
+  <ul>
+  <li>Sons . . . . . . . . . . . Daughters</li>
+  <li>Tan Boon Chiat   </li>
+  <li>Tan Sim Boh . . . . Tan Biau Eng (Mrs Kang Tiang Kim)</li>
+  <li>Tan Sim Eng . . . . Tan Biau Hwa (Mrs Cheong Ann Sim)</li>
+  <li>Tan Sim Teck . .  . Tan Biau Luan (Mrs Lim Peng Han)</li>
+  <li>Tan Peng Choo    </li>
+  <li>Tan Sim Keng     </li>
+  <li>Tan Kim Hoe      </li>
+  <li>Tan Kim Guan     </li>
+  </ul>
+  <p>.</p>
 
-<p>Some of the more well known members of his large family are described below, based on available documents.</p>
-</div>
 
-<div class="dotted-divider-3"></div>
+  </div>   <!-- blob-content -->
+</div>     <!-- text-blob -->
+
+</div> <!-- section -->
+
+<div class="dotted-divider"></div>
+<p>.</p>
 
   <!-- S. B. Tan -->
   <div class="section">
@@ -144,9 +241,18 @@
     • Studied in ACS, took up Law at Cambridge University. (Ref 04)<br>
     • Barrister, called to the Bar.<br>
     • Practised with Messrs. Donaldson & Burkinshaw<br>
-    • Left Law for business, 1937</p>
+    • Left Law for business, 1937<br>
+    • Municipal Councellor, board member of Education Board, Singapore Improvement Trust, among others
+   </p>
 <p>.</p>
-    <p><strong>Public Service</strong><br>
+<div class="text-blob">
+  <input type="checkbox" id="blob2" class="blob-toggle">
+
+  <label for="blob2" class="blob-summary">
+    For more details, press or click the toggle here.
+  </label>   
+  <div class="blob-content">
+     <p><strong>Public Service</strong><br>
     • Municipal Commissioner (Ref 03)<br>
     • Board member Education Board, 1941 (Ref 05)<br>
     • Board member, Singapore Improvement Trust (SIT) (Ref 06)<br>
@@ -166,10 +272,16 @@ Ref 05: Education Board Member <em>Straits Times, 11 Jan 1941, Pg 11</em><br>
     </ul>
     <p><strong>Personal Life</strong></p>
     <p>Married Margaret Chang on 14 October 1933 in Shanghai.
-    Tan Sim Boh Road, behind Thomson Medical Centre, is named in his honour.</p>
+    Tan Sim Boh Road, behind Thomson Medical Centre, is named in his honour.
+    </p>
+  </div> <!-- blob content -->
+</div>  <!-- blob text -->
 <p>.</p>
 
-<div class="dotted-divider-3"></div>
+</section> <!-- s b tan -->
+<p>.</p>
+
+<div class="dotted-divider"></div>
   <!-- S. E. Tan -->
 
 <div class="section">
@@ -186,15 +298,39 @@ Ref 05: Education Board Member <em>Straits Times, 11 Jan 1941, Pg 11</em><br>
         <em>Family collection</em>
       </figcaption>
     </figure>
+<p id="center-text">Photo was taken from Kranji War Memorial, around 2015</p>
 <p>.</p>
-
+ <figure class="figure-block">
+      <figcaption id="SE02" class="caption-large"><p class="new-item">
+        Pic SE02: S E Tan, pic taken at Downing College, Cambridge University, 2019.</p>
+      </figcaption>
+      <div class="img-frame">
+        <img src="img1/SE-downing-3.png" alt="Tan Sim Eng - memorial, Downing College, Cambridge, 2019." >
+      </div>
+      <figcaption class="caption-large">
+        <em>Family collection, enhanced with help from CoPilot</em>
+      </figcaption>
+    </figure>
+<p id="center-text">Photo was taken by a family member, not in picture. She was onsite at Downing Hall, Canbridge University, around Sep 2019. The metal pointer she used is visible in this photo.</p>
+<p>.</p>
     <p>Second son of TTN. Queen’s Scholar (1933), University of Cambridge. Became a Lawyer, Secretary of Chinese Bankers Trust (1938), and volunteer Machine Gunner with the Straits Settlements Volunteer Force (SSVF).</p>
 <p>.</p>
     <p>He was detained during the Japanese Sook Ching operation after the fall of Singapore in 1942 and never seen again. His name appears at the Kranji War Memorial. (Pic SE01)</p>
 <p>.</p>
-    <p>Note: Tens of thousands of male Chinese of fighting age were murdered by the Japanese Secret Police shortly after the fall of Singapore on 14th Feb 1942. This massacre is known as the Sook Ching massacre.</p>
-<p>.</p>
-    <p><strong>Education</strong></p>
+   
+
+<div class="text-blob">
+  <input type="checkbox" id="blob3" class="blob-toggle">
+
+  <label for="blob3" class="blob-summary">
+    For more details, press or click the toggle here.
+  </label>
+
+  <div class="blob-content">
+    <p>
+       Note: Tens of thousands of male Chinese of fighting age were murdered by the Japanese Secret Police shortly after the fall of Singapore on 14th Feb 1942. This massacre is known as the Sook Ching massacre.
+    </p>
+<p><strong>Education</strong></p>
     <ul>
      <li> Studied in ACS. Honours, Cambridge Certificate, 1929 (Ref 08)</li>
      <li> Won Queen's Scholarship, 1932 (Ref 09)</li>
@@ -216,14 +352,17 @@ Ref 05: Education Board Member <em>Straits Times, 11 Jan 1941, Pg 11</em><br>
 <p>Ref 08: S E Tan, ACS Exam Results.<em>Singapore Free Press and Mercantile Advertiser, 9 Apr 1930, Pg 7 </em><br>
 Ref 09: Queen's Scholar <em>Straits Times 22 Dec 1932 Pg 12</em><br>
 Ref 03: Graduation, and return <em>Straits Budget 4 Jul 1940 Pg 6</em></p>
-
-  </div>
+  </div>   <!-- blob-content -->
+</div>     <!-- text-blob  -->
+<p>.</p>
+    
+  </div>   <!-- s e tan -->
 <p>.</p>
 
-<div class="dotted-divider-3"></div>
+<div class="dotted-divider"></div>
 
   <!-- P. C. Tan -->
-  <div class="section">
+<div class="section">
     <h2>Tan Peng Choo (P. C. Tan)</h2>
 
 <figure class="figure-block">
@@ -254,6 +393,15 @@ Ref 03: Graduation, and return <em>Straits Budget 4 Jul 1940 Pg 6</em></p>
     <p>He returned to Singapore in 1946, after the British recaptured Singapore. He started a successful business, and little by little, rebuilt the family house, which had been looted, and in a bad state.</p>
    <p>He later took on teaching both full-time and part‑time when business became bad. He passed away in the mid-1970s</p>
 <p>.</p>   
+
+<div class="text-blob">
+  <input type="checkbox" id="blob4" class="blob-toggle">
+
+  <label for="blob4" class="blob-summary">
+    For more details, press or click the toggle here.
+  </label>
+
+  <div class="blob-content">
 <p><strong>Education</strong></p>
  <ul>
   <li> ACS, Senior Cambridge, 1929 (Ref 12)</li>
@@ -261,12 +409,12 @@ Ref 03: Graduation, and return <em>Straits Budget 4 Jul 1940 Pg 6</em></p>
  </ul>
 <p>.</p>
 <p><strong>Pre-War Working Life</strong></p>
- <ul>
+<ul>
   <li>Helped run his father's rubber plantation in Johore</li>
   <li>Taught Basic English (Ref 14)</li>
   <li>Active contributor to local community (Ref 15)</li>
   <li>Keen Chess player (Ref 16)</li>
- </ul>
+</ul>
 <p>.</p>
 <p><strong>Wartime Service</strong></p>
  <ul>
@@ -288,7 +436,10 @@ Ref 03: Graduation, and return <em>Straits Budget 4 Jul 1940 Pg 6</em></p>
    Ref 14: Basic English Course <em>Straits Times, 27 Oct 1936, Pg 10</em><br>
    Ref 15: School fee<em> Malaya Tribune, 29 Nov 1929 pg 2</em><br>
    Ref 16: Chess<em> Straits Times, 6 Jan 1939, pg 23</em><br>
-   Ref 17: Extortion <em>Singapore Standard, 23 Mar 1956, Pg 1</em></p>
+   Ref 17: Extortion <em>Singapore Standard, 23 Mar 1956, Pg 1</em>
+    </p>
+  </div>  <!-- blob-content -->
+</div>    <!-- blob-text -->
 <p>.</p>
  <figure class="figure-block">
       <figcaption class="caption-large">
@@ -301,7 +452,7 @@ Ref 03: Graduation, and return <em>Straits Budget 4 Jul 1940 Pg 6</em></p>
       <figcaption class="caption-large">
         <em>Family collection</em>
       </figcaption>
-   </figure>
+ </figure>
 
 <figure class="figure-block">
       <figcaption class="caption-large">
@@ -314,67 +465,51 @@ Ref 03: Graduation, and return <em>Straits Budget 4 Jul 1940 Pg 6</em></p>
       <figcaption class="caption-large">
         <em>Family collection</em>
       </figcaption>
-   </figure>
+ </figure>
 
- </div>
 <p>.</p>
 
-<div class="dotted-divider-3"></div>
+<p class="new-item">
+<div class="two-pics-row">
+  <!-- LEFT PIC -->
+  <div class="pic-box">
+    <div class="caption-top">Lunar New year dinner, front dining hall, early 1950s</div>
 
- <div class="section">
-    <h2><strong>Historic Farrer Park, near Kerbau Road</strong></h2>
-  
-<figure class="figure-block">
-      <figcaption class="caption-large">
-        Pic FP01: Artist's impression of a plane landing on Farrer Park Race Course "Airport"
-      </figcaption>
-      <div class="img-frame">
-        <img src="img1/biplane.png" alt="Biplane landing at Farrer Park">
-      </div>
-      <figcaption class="caption-large">
-        <em>Sketched with help from CoPilot</em>
-      </figcaption>
-   </figure>  
-  <p>.</p>
-  
-<p> Farrer Park had been a race course in early 1900s.</p>
-<p> In Dec 1919, a plane, piloted by Cpt Ross Smith, landed here for a stopover. He was on his way to Darwin as part of the London-Darwin Air Race. <strong>He won the race.</strong><em>  Ref 18: Singapore Free Press and Mercantile Advertiser, 5 Dec 1919.</em></p>
+    <div class="img-frame equal-height">
+      <img src="img2/dininghall.jpg" alt="Old dining hall at Kerbau Rd">
+    </div>
+
+    <div class="caption-bottom"><em>Family Collection</em></div>
+
+    <p class="pic-comment">
+      The front dining hall was used for important family occasions.
+    </p>
+  </div> <!-- pic box -->
+
+  <!-- RIGHT PIC -->
+  <div class="pic-box">
+    <div class="caption-top">Wedding Banquet at front dining hall</div>
+
+    <div class="img-frame equal-height">
+      <img src="img2/dininghall2.jpg" alt="wedding banquet, front dining hall, early 1950s">
+    </div>
+
+    <div class="caption-bottom"><em>Familty collection</em></div>
+
+    <p class="pic-comment">
+      A Wedding Banquet for a close relative. There were also tables at the left and right garage areas. Mid 1950s.
+    </p>
+  </div>  <!-- pic box -->
+
+</div> <!-- 2 pics row -->
+
+</div> <!-- p c tan section -->
 <p>.</p>
-<h2><strong>Other Interesting Places in historic Farrer Park Area</strong></h2>
+
+   <p class="center-text">Press the 3-bar menu at top right to go next page or back to top</p>
+<div class="dotted-divider"></div>
+
 <p>.</p>
-  <figure class="figure-block">
-      <figcaption class="caption-large">
-        Pic FP02: Historic Durham Estate (SIT flats) - lake, 31 Dec 1967
-      </figcaption>
-
-      <div class="img-frame">
-        <img src="img1/DurEstFlood.jpg" alt="Flood at Old Durham Estate, 31 Dec 1967">
-      </div>
-      <figcaption class="caption-large">
-        <em>Family collection</em>
-      </figcaption>
-   </figure>  
-  <p>.</p>
-
- <figure class="figure-block">
-      <figcaption class="caption-large">
-        Pic FP03: Cambridge Road - "river", 31 Dec 1967
-      </figcaption>
-
-      <div class="img-frame">
-        <img src="img1/CambridgeRd.jpg" alt="Flood at Cambridge Road, 31 Dec 1967">
-      </div>
-      <figcaption class="caption-large">
-        <em>Family collection</em>
-      </figcaption>
-   </figure>  
-  <p>.</p>
-
-
- 
- 
-</div>
-
-
+</div> <!-- Story container -->
 </body>
 </html>

@@ -1,166 +1,403 @@
+/* ============================================================
+   GLOBAL BASE STYLES
+   ============================================================ */
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
-  /** font-family: system-ui, sans-serif;  **/
-  line-height: 1.6;
-  margin: 2rem auto;
-  max-width: 800px;
-  padding: 0 1rem;
-  color: #222;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    background: #fff;
+    color: #222;
 }
 
-h1, h2, h3 {
-  font-weight: 600;
+.story-container {
+    max-width: 900px;
+    margin: 80px auto 40px auto;
+    padding: 0 16px;
 }
 
-/* --- UNIVERSAL IMAGE PRESENTATION --- */
-
-.figure-block {
-  margin: 1.5rem 0;
-  text-align: center;
-}
-
-figure {
-  margin: 0;
-}
-
-/* Default figcaption */
-figcaption {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-/* NEW: Large default caption */
-.caption-large {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #333;
-}
-
-/* Smart adaptive image frame */
-.img-frame {
-  width: 70%;
-  max-width: 520px;
-  margin: 1.5rem auto;
-
-  background: #f2f2f2;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  overflow: hidden;
-}
-
-/* Mobile override */
-@media (max-width: 600px) {
-  .img-frame {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-
-.img-frame.landscape {
-  aspect-ratio: 16 / 9;
-}
-
-.img-frame.portrait {
-  aspect-ratio: auto;
-  padding: 1rem 0;
-}
-
-.img-frame.square {
-  aspect-ratio: 1 / 1;
-}
-
-
-.img-frame img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
+/* Soft left margin for text blocks */
+.story-container p,
+.story-container .caption-top,
+.story-container .caption-bottom,
+.story-container .news-caption-top,
+.story-container .news-caption-bottom,
+.story-container .pic-comment,
+.story-container .news-text,
+.story-container .one-pic-right,
+.story-container .grid-side-by-side div {
+    margin-left: 8px;
 }
 
 .section {
-  margin-bottom: 2.5rem;
-}
-.family-table {
-  width: 100%;
-  border-collapse: collapse;
+    margin-bottom: 2.5rem;
 }
 
+/* ============================================================
+   GLOBAL IMAGE FRAME (SINGLE PIC)
+   ============================================================ */
+
+.img-frame {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    background: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-frame img {
+    max-width: 85%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Figure block formatting */
+.figure-block {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.caption-large {
+    font-size: 0.95rem;
+    margin: 6px 0;
+    color: #444;
+}
+
+/* ============================================================
+   ONE-PIC LOGO LAYOUT (IMAGE LEFT, TEXT RIGHT)
+   ============================================================ */
+
+.one-pic-row {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.one-pic-left {
+    flex: 0 0 220px;
+    text-align: center;
+}
+
+.one-pic-left .img-frame {
+    max-width: 220px;
+}
+
+.one-pic-right {
+    flex: 1;
+    text-align: left;
+}
+
+.one-pic-caption-top,
+.one-pic-caption-bottom {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 4px 0;
+}
+
+@media (max-width: 600px) {
+    .one-pic-row {
+        flex-direction: column;
+        text-align: center;
+    }
+    .one-pic-right {
+        text-align: center;
+    }
+}
+
+/* ============================================================
+   GRID SIDE-BY-SIDE (LOGO + TEXT)
+   ============================================================ */
+
+.grid-side-by-side {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.grid-side-by-side.small-image img {
+    width: 160px;
+    max-width: 100%;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    padding: 4px;
+    background: #f2f2f2;
+}
+
+.grid-side-by-side div {
+    flex: 1;
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.45;
+    color: #333;
+}
+
+@media (max-width: 600px) {
+    .grid-side-by-side {
+        flex-direction: column;
+        text-align: center;
+    }
+    .grid-side-by-side div {
+        text-align: center;
+    }
+}
+
+/* ============================================================
+   TWO-PICS LAYOUT (MERGED: OLD + NEWSPAPER)
+   ============================================================ */
+
+.two-pics-row,
+.two-pics-news {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 2rem 0;
+}
+
+.pic-box,
+.news-pic-box {
+    flex: 1;
+    max-width: 50%;
+    text-align: center;
+}
+
+/* Captions (shared) */
+.caption-top,
+.caption-bottom,
+.news-caption-top,
+.news-caption-bottom {
+    font-size: 0.9rem;
+    margin: 4px 0;
+    color: #555;
+}
+
+/* Image frames (shared) */
+.news-img-frame,
+.img-frame {
+    width: 100%;
+    background: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-img-frame img,
+.img-frame img {
+    max-width: 90%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Text under pictures */
+.pic-comment,
+.news-text p {
+    text-align: left;
+    margin: 0.6rem 0;
+    font-size: 0.95rem;
+    line-height: 1.45;
+    color: #333;
+}
+
+.news-text {
+    margin-top: 0.8rem;
+}
+
+/* Mobile stacking */
+@media (max-width: 600px) {
+    .two-pics-row,
+    .two-pics-news {
+        flex-direction: column;
+    }
+    .pic-box,
+    .news-pic-box {
+        max-width: 100%;
+    }
+}
+
+/* ============================================================
+   HAMBURGER MENU (PINNED TOP RIGHT)
+   ============================================================ */
+
+.fixed-hamburger {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    z-index: 3000;
+}
+
+#hamburger-toggle {
+    display: none;
+}
+
+.hamburger-icon {
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    background : #fff;
+    border: 1px solid #ccc;
+}
+
+.hamburger-panel {
+    display: none;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background: #333;
+    border: 1px solid #555;
+    min-width: 180px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    padding: 10px 0;
+    border-radius: 4px;
+}
+
+.hamburger-panel a {
+    display: block;
+    padding: 12px 18px;
+    text-decoration: none;
+    color: #ffff00; /* bright yellow */
+    font-size: 16px;
+}
+
+
+.hamburger-panel a:hover {
+    background: #444;
+    color: #ffff00;
+}
+
+#hamburger-toggle:checked ~ .hamburger-panel {
+    display: block;
+}
+
+/* Center the entire table */
+.family-table {
+    margin: 0 auto;          /* centers the table */
+    border-collapse: collapse;
+    text-align: left;        /* keeps names aligned neatly */
+}
+
+/* Optional: spacing */
 .family-table th,
 .family-table td {
-  padding: 6px 12px;
+    padding: 6px 36px;
 }
 
-.family-table th:first-child,
-.family-table td:first-child {
-  width: 45%;   /* Sons column */
-}
-
-.family-table th:last-child,
-.family-table td:last-child {
-  width: 55%;   /* Daughters column */
-}
-.family-table td + td,
-.family-table th + th {
-  border-left: 1px solid #ccc;
-}
+/* Center the column headers */
 .family-table th {
-  text-align: left;
+    text-align: center;
+    font-weight: bold;
 }
 
+/* Align daughters' names under the Daughters header */
+.family-table td:nth-child(2) {
+    text-align: center;
+}
+
+.center-text {
+    text-align: center;
+    margin: 12px 0;      /* optional: adds breathing space */
+    line-height: 1.5;    /* optional: improves readability */
+}
 
 .dotted-divider {
-  margin: 2rem 0;
-  border-bottom: 3px dotted #ffeb3b; /* bright yellow */
+    border: none;
+    border-top: 1px dotted #999;
+    margin: 24px 0;
+}
+
+.new-item::after {
+    content: "NEW";
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 6px;
+    font-size: 0.7em;
+    font-weight: bold;
+    color: white;
+    background: #d9534f;   /* muted red */
+    border-radius: 4px;
+}
+
+.text-blob {
+    margin: 1.5rem 0;
+}
+
+/* Hidden checkbox */
+.text-blob .blob-toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Summary paragraph (clickable) */
+.text-blob .blob-summary {
+    display: block;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-left: 8px;          /* matches your paragraph left margin */
+    cursor: pointer;
+    font-weight: 600;
+    line-height: 1.45;
+    position: relative;
+    padding-right: 2.5rem;     /* space for chevron */
+    color: #222;
+}
+
+/* Chevron icon */
+.text-blob .blob-summary::after {
+    content: "▾";
+    position: absolute;
+    right: 1rem;
+    top: 1.1rem;
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+    color: #444;
+}
+
+/* Content area (hidden by default) */
+.text-blob .blob-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+    padding: 0 1.25rem;
+    margin-left: 8px;          /* aligns with your text blocks */
+}
+
+/* Expanded state */
+.text-blob .blob-toggle:checked ~ .blob-content {
+    max-height: 800px;         /* large enough for multi-paragraph */
+    padding-bottom: 0.75rem;
+}
+
+/* Rotate chevron when open */
+.text-blob .blob-toggle:checked + .blob-summary::after {
+    transform: rotate(180deg);
 }
 
 
-.dotted-divider-3 {
-  margin: 2rem 0;
-  border-bottom: 4px dashed #ffeb3b  ;  /*  yellow  */
-  background: none !important;
-  height: 0;
-  line-height: 0;
+
+/* Keep at bottom  */
+.hamburger-panel a:link,
+.hamburger-panel a:visited,
+.hamburger-panel a:hover,
+.hamburger-panel a:active {
+    color: #ffff00 !important;
 }
 
-
-/*  Drop down menu  new */
-.section-drop {
-  margin: 1.5rem 0;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 0.5rem 1rem;
-  background: #fafafa;
+.hamburger-panel {
+    background: black !important;
 }
 
-.section-drop summary {
-  font-size: 1.4rem;
-  font-weight: bold;
-  cursor: pointer;
-  padding: 0.5rem 0;
-}
-
-.section-drop[open] {
-  background: #fff;
-  border-color: #888;
-}
-
-.section-drop summary::-webkit-details-marker {
-  display: none;
-}
-
-.section-drop summary::before {
-  content: "▶ ";
-  font-size: 1.2rem;
-  transition: transform 0.2s ease;
-}
-
-.section-drop[open] summary::before {
-  transform: rotate(90deg);
-}
