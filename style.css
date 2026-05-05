@@ -378,7 +378,7 @@ body {
 
 /* Expanded state */
 .text-blob .blob-toggle:checked ~ .blob-content {
-    max-height: 800px;         /* large enough for multi-paragraph */
+    max-height: 1800px;         /* large enough for multi-paragraph */
     padding-bottom: 0.75rem;
 }
 
